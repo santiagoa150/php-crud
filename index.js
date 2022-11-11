@@ -1,5 +1,4 @@
 const getOne = (id) => {
-    let result = ''
     $.ajax({
         method: 'POST',
         url: 'get-one.php',
@@ -7,9 +6,8 @@ const getOne = (id) => {
             id,
         }
     }).done((response) => {
-        result = response;
+        return response;
     })
-    return result;
 }
 
 const setListeners = () => {
@@ -21,7 +19,6 @@ const setListeners = () => {
             if (name.substring(0, 6) === 'detail'){
                 const modal = document.getElementById('product-detail');
                 const id = name.substring(7);
-                console.log(id);
                 const element = getOne(id);
                 if (element !== ''){
                     modal.innerHTML = element;
