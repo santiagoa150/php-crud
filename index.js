@@ -16,6 +16,7 @@ const setListeners = () => {
     const elements = document.getElementsByClassName('inventory-button');
     for (const element of elements) {
         element.addEventListener('click', (e) => {
+            e.preventDefault();
             const name = element.getAttribute('name');
             if (name.substring(0, 6) === 'detail'){
                 const modal = document.getElementById('product-detail');
