@@ -50,11 +50,13 @@
     </div>
     <div id="inventory-father">
         <div id="inventory-container">
-            <?php
+            <div id="rows-container">
+                <?php
                 include("get-all.php");
                 $products = getAllProducts();
                 echo $products;
-            ?>
+                ?>
+            </div>
             <div id="inventory-create-product"">
                 <input id="show-create-modal" type="button" value="Crear" />
             </div>
