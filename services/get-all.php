@@ -1,6 +1,6 @@
 <?php
     function getAllProducts(){
-        include("../pool.php");
+        include("pool.php");
         $response = "";
         $conn = createConnection();
         $query = "SELECT * FROM productos";
