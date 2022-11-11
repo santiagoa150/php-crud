@@ -15,6 +15,39 @@
     </div>
     <div id="product-detail">
     </div>
+    <div id="product-deleted">
+
+    </div>
+    <div id="product-create">
+        <h1>Creación de productos</h1>
+        <form>
+            <div>
+                <p>Nombre: </p>
+                <input type="text">
+            </div>
+            <div>
+                <p>Referencia: </p>
+                <input type="text">
+            </div>
+            <div>
+                <p>Precio: </p>
+                <input type="text">
+            </div>
+            <div>
+                <p>Peso: </p>
+                <input type="text">
+            </div>
+            <div>
+                <p>Categoria: </p>
+                <input type="text">
+            </div>
+
+            <div>
+                <p>stock: </p>
+                <input type="text">
+            </div>
+        </form>
+    </div>
     <div id="inventory-father">
         <div id="inventory-container">
             <?php
@@ -22,6 +55,9 @@
                 $products = getAllProducts();
                 echo $products;
             ?>
+            <div id="inventory-create-product"">
+                <input id="show-create-modal" type="button" value="Crear" />
+            </div>
         </div>
     </div>
     <script src="index.js"></script>

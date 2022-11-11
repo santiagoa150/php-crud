@@ -15,16 +15,42 @@ const getOne = (element) => {
     })
 }
 
+const deleteOne = (element) => {
+    const modal = document.getElementById('product-deleted');
+    const id = element.substring(7);
+    $.ajax({
+        method: 'POST',
+        url: 'delete-one.php',
+        data: {
+            id,
+        }
+    }).done((response) => {
+        if (response && response !== '') {
+            modal.innerHTML = response;
+            modal.style.display = 'flex';
+        }
+    })
+}
+
 const setListeners = () => {
     const elements = document.getElementsByClassName('inventory-button');
     for (const element of elements) {
         element.addEventListener('click', (e) => {
             e.preventDefault();
-            const name = element.getAttribute('name');
-            if (name.substring(0, 6) === 'detail') {
+            const name = element.getAttribute('name')
+            const method = name.substring(0, 6);
+            if ( method === 'detail') {
                 getOne(name);
+            }
+            if (method === 'delete'){
+
             }
         });
     }
+
+    const showCreateElement = document.getElementById('show-create-modal');
+    showCreateElement.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
 }
 setListeners();
