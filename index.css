@@ -1,0 +1,33 @@
+body{
+    background-color: lightgray;
+    min-height: 100vh;
+    font-family: "Estrangelo Nisibin";
+    margin: 0;
+    padding: 0;
+}
+
+#tittle{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#inventory-father{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inventory-container{
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px gray;
+}
