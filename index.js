@@ -11,6 +11,12 @@ const getOne = (element) => {
         if (response && response !== '') {
             modal.innerHTML = response;
             modal.style.display = 'flex';
+            const closeDetailModal = document.getElementById('close-detail-modal');
+            closeDetailModal.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modal = document.getElementById('product-detail');
+                modal.style.display = 'none';
+            });
         }
     })
 }
@@ -51,13 +57,6 @@ const setListeners = () => {
     const showCreateElement = document.getElementById('show-create-modal');
     showCreateElement.addEventListener('click', (e) => {
         e.preventDefault();
-    })
-
-    const closeDetailModal = document.getElementById('close-detail-modal');
-    closeDetailModal.addEventListener('click', (e) => {
-        e.preventDefault();
-        const modal = document.getElementById('product-detail');
-        modal.style.display = 'none';
     })
 }
 setListeners();
