@@ -39,11 +39,11 @@ const setListeners = () => {
             e.preventDefault();
             const name = element.getAttribute('name')
             const method = name.substring(0, 6);
-            if ( method === 'detail') {
+            if (method === 'detail') {
                 getOne(name);
             }
-            if (method === 'delete'){
-
+            if (method === 'delete') {
+                deleteOne(element);
             }
         });
     }
