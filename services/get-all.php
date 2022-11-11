@@ -9,11 +9,11 @@
         if ($row_cnt > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $response = $response . "
-                <div>
-                    <p>{$row['nombre']}</p>
-                    <p>{$row['precio']}</p>
-                    <p>{$row['referencia']}</p>
-                    <form>
+                <div class='inventory-row'>
+                    <p class='inventory-column'>{$row['nombre']}</p>
+                    <p class='inventory-column'>{$row['precio']}</p>
+                    <p class='inventory-column'>{$row['referencia']}</p>
+                    <form class='inventory-form'>
                         <input type='submit' class='inventory-button' name='{$row['id']}' value='Detalle' />
                         <input type='submit' class='inventory-button' name='{$row['id']}' value='Borrar' />
                         <input type='submit' class='inventory-button' name='{$row['id']}' value='Actualizar' />
