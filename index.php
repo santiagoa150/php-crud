@@ -15,7 +15,7 @@
     <div id="inventory-father">
         <div id="inventory-container">
             <?php
-                include("./services/get-all.php");
+                include("get-all.php");
                 $products = getAllProducts();
                 echo $products;
             ?>
