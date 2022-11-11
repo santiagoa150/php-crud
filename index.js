@@ -1,7 +1,7 @@
 const getOne = (id) => {
     let result = ''
     $.ajax({
-        method: 'GET',
+        method: 'POST',
         url: 'get-one.php',
         data: {
             id,

@@ -1,7 +1,8 @@
 <?php
     include("pool.php");
     $response = "";
-    $id = $_GET['id'];
+    $id = $_POST['id'];
+    echo $id;
     $conn = createConnection();
     $query = "SELECT * FROM productos WHERE id={$id}";
     $result = mysqli_query($conn, $query);
