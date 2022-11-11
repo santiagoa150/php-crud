@@ -14,9 +14,9 @@
                     <p class='inventory-column'>{$row['precio']}</p>
                     <p class='inventory-column'>{$row['referencia']}</p>
                     <form class='inventory-form'>
-                        <input type='submit' class='inventory-button' name='{$row['id']}' value='Detalle' />
-                        <input type='submit' class='inventory-button' name='{$row['id']}' value='Borrar' />
-                        <input type='submit' class='inventory-button' name='{$row['id']}' value='Actualizar' />
+                        <input type='submit' class='inventory-button' name='detail-{$row['id']}' value='Detalle' />
+                        <input type='submit' class='inventory-button' name='delete-{$row['id']}' value='Borrar' />
+                        <input type='submit' class='inventory-button' name='update-{$row['id']}' value='Actualizar' />
                     </form>
                 </div>";
             }
