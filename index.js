@@ -52,5 +52,12 @@ const setListeners = () => {
     showCreateElement.addEventListener('click', (e) => {
         e.preventDefault();
     })
+
+    const closeDetailModal = document.getElementById('close-detail-modal');
+    closeDetailModal.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modal = document.getElementById('product-detail');
+        modal.style.display = 'none';
+    })
 }
 setListeners();

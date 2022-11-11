@@ -16,7 +16,6 @@
     <div id="product-detail">
     </div>
     <div id="product-deleted">
-
     </div>
     <div id="product-create">
         <h1>Creación de productos</h1>
