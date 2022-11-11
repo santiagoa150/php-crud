@@ -34,6 +34,12 @@ const deleteOne = (element) => {
         if (response && response !== '') {
             modal.innerHTML = response;
             modal.style.display = 'flex';
+            const closeDeleteModal = document.getElementById('close-delete-modal');
+            closeDeleteModal.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modal = document.getElementById('product-deleted');
+                modal.style.display = 'none';
+            });
         }
     })
 }
