@@ -43,7 +43,7 @@ const setListeners = () => {
                 getOne(name);
             }
             if (method === 'delete') {
-                deleteOne(element);
+                deleteOne(name);
             }
         });
     }
